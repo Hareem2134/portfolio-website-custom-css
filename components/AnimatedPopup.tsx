@@ -1,7 +1,13 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import "../src/app/globals.css";
 
-export default function AnimatedPopup({animationType, children}:any) {
+interface AnimatedPopupProps {
+  animationType: "bounce" | "popup" | string;
+  children: ReactNode;
+}
+
+export default function AnimatedPopup({animationType, children} : AnimatedPopupProps) {
+  
   const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
@@ -15,7 +21,7 @@ export default function AnimatedPopup({animationType, children}:any) {
     <div>
       {showAnimation && <div className={animationClass}>{children}</div>}
     </div>
-  );
+  );                                                                                                                                                                                                                                                                                                                                                           
 }
 
  
