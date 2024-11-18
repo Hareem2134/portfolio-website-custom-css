@@ -138,6 +138,8 @@ body, html {
   background: linear-gradient(to right, #15307a, #540f8b);
   margin: 0 auto;
   padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .nav {
@@ -147,15 +149,17 @@ body, html {
 }
 
 .nav-links {
-  padding: 0 15px;
+  padding: 10px 15px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-links:hover {
-  color: #7c7cf0;
+  color: #9494f8;
+  transform: scale(1.1);
 }
 
 
@@ -193,9 +197,11 @@ body, html {
 
 
 .home {
-  background: linear-gradient(120deg, #1e3a8a, #6b21a8, #15307a);
-  background-size: 400% 400%;
-  animation: gradientAnimation 7s ease infinite;
+  background: linear-gradient(120deg, #1e3a8a, #6b21a8, #15307a, #0000ff);
+  background-size: 500% 500%;
+  animation: gradientAnimation 10s ease infinite;
+  position: relative;
+  overflow: hidden;
 }
 
 @keyframes gradientAnimation {
@@ -207,17 +213,17 @@ body, html {
 .wave {
   position: absolute;
   width: 300%;
-  height: 20vh;
+  height: 25vh;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0.9;
-  animation: wave 7s infinite linear;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0.8;
+  animation: wave 10s infinite linear;
 }
 
 .wave:nth-child(2) {
   bottom: 15vh;
-  opacity: 0.5;
-  animation-duration: 8s;
+  opacity: 0.6;
+  animation-duration: 12s;
 }
 
 @keyframes wave {
@@ -854,7 +860,7 @@ body, html {
   flex-direction: column;
   text-align: center;
   padding-top: 120px;
-  background-color: #f7f5f5fa;
+  background-color: #e6e6e6;
   color: #353535;
   font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
   font-weight: bold;
