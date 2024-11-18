@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import "../src/app/globals.css";
 
 interface AnimatedPopupProps {
-  animationType: "bounce" | "popup" | string;
+  animationType: string;
   children: ReactNode;
 }
 
@@ -15,13 +15,14 @@ export default function AnimatedPopup({animationType, children} : AnimatedPopupP
   }, []);
 
   const animationClass =
-      animationType === "bounce" ? "bounce" : "popup";
+      animationType === "popup"
+      ? "popup"
+      : animationType === "tracking"
+      ? "tracking-in-expand-fwd-bottom"
+      : animationType === "focus"
+      ? "text-focus-in"
+      : "";
 
-  return (
-    <div>
-      {showAnimation && <div className={animationClass}>{children}</div>}
-    </div>
-  );                                                                                                                                                                                                                                                                                                                                                           
+      return <div className={showAnimation ? animationClass : ""}>{children}</div>;
+                                                                                                                                                                                                                                                                                                                                                          
 }
-
- 

@@ -17,12 +17,12 @@ const skills = [
     items: ["DreamWeaver", "Wordpress", "React.js", "Next.js"]
   },
   {
-    title: "Design",
-    items: ["Photoshop", "Illustrator", "Premiere Pro"]
-  },
-  {
     title: "Social Media Management",
     items: ["Instagram", "Facebook", "TikTok", "YouTube", "Pinterest", "X"]
+  },
+  {
+    title: "Design",
+    items: ["Photoshop", "Illustrator", "Premiere Pro"]
   },
   {
     title: "3D Game Development",
@@ -59,6 +59,64 @@ const experiences = [
 ];
 
 
+const PortfolioCard = [
+  {
+    image: "/1.png",
+    title: "Multipage Website",
+    description: "A beautiful Multipage Ecommerce Website",
+    link: "https://multipage-website-custom-css.vercel.app/"
+  },
+  {
+    image: "/2.png",
+    title: "Figma to HTML website",
+    description: "Converted Figma Design to HTML",
+    link: "https://figma-to-html-assignment-class7-19thoct.vercel.app/"
+  },
+  {
+    image: "/3.png",
+    title: "Resume (Nextjs)",
+    description: "My Resume in Nextjs",
+    link: "https://personal-resume-assignment-12oct.vercel.app/"
+  },
+  {
+    image: "/4.png",
+    title: "Static Resume (HTML CSS)",
+    description: "A stunning portfolio website",
+    link: "https://static-resume-by-hareemfarooqi.vercel.app/"
+  },
+  {
+    image: "/5.png",
+    title: "Dynamic Resume (HTML CSS)",
+    description: "Dynamic Resume in HTML CSS",
+    link: "https://dynamic-resume-five-alpha.vercel.app/"
+  },
+  {
+    image: "/6.png",
+    title: "Simple Calculator",
+    description: "A Simple Calculator in Typescript",
+    link: "https://github.com/Hareem2134/simple-calculator"
+  },
+  {
+    image: "/7.png",
+    title: "Student Management System",
+    description: "Student Management System in Typescript",
+    link: "https://github.com/Hareem2134/Student-Management-System"
+  },
+  {
+    image: "/8.png",
+    title: "Currency Converter",
+    description: "Currency Converter in Typescript",
+    link: "https://github.com/Hareem2134/Currency-Converter"
+  },
+  {
+    image: "/9.png",
+    title: "ATM App",
+    description: "ATM in Typescript",
+    link: "https://github.com/Hareem2134/ATM"
+  }
+];
+
+
 export default function Home() {
 
   return (
@@ -75,7 +133,8 @@ export default function Home() {
           </AnimatedPopup>
 
           <div className="text-content">
-            <AnimatedPopup animationType="popup">
+
+            <AnimatedPopup animationType="tracking">
               <div className="intro">
                 <h1>Hello,</h1>
                 <h1>I'm HAREEM FAROOQI</h1>
@@ -83,11 +142,14 @@ export default function Home() {
               </div>
               </AnimatedPopup>
 
-          <p className="description">
-            A passionate web developer and designer with expertise in creating
+          <div className="description">
+
+            <AnimatedPopup animationType="focus">
+            <p>A passionate web developer and designer with expertise in creating
             beautiful, functional, and user-friendly websites. Specializing in
-            modern web technologies and creative design solutions.
-          </p>
+            modern web technologies and creative design solutions.</p>
+            </AnimatedPopup>
+          </div>
 
           <div className="flex-container">
             <a href="#contact" className="contact-button">
@@ -112,16 +174,17 @@ export default function Home() {
 
         </div>
       </div>
-    </div><section id="about" className="about">
+    </div>
+    
+      <section id="about" className="about">
 
         <div className="about-container">
 
           <div className="about-header">
-
             <h2 className="about-title">About Me</h2>
-
             <div className="about-underline"></div>
           </div>
+
           <div className="about-content">
 
             <div className="about-text">
@@ -142,7 +205,9 @@ export default function Home() {
           </div>
 
         </div>
-      </section><section id="skills" className="skills-section">
+      </section>
+      
+      <section id="skills" className="skills-section">
         <div className="skills-container">
           <div className="skills-header">
             <h2 className="skills-title">Skills</h2>
@@ -163,7 +228,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section><section id="experience" className="experience-section">
+      </section>
+      
+      <section id="experience" className="experience-section">
 
         <div className="experience-container">
           <div className="experience-header">
@@ -181,7 +248,33 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section><section id="contact" className="contact-section">
+      </section>
+
+      <section id="portfolio" className="portfolio-section">
+        <div className="portfolio-container">
+          <div className="portfolio-header">
+            <h2 className="portfolio-title">Portfolio</h2>
+            <div className="portfolio-underline"></div>
+          </div>
+          <div className="portfolio-grid">
+            {PortfolioCard.map((card) => (
+              <div key={card.title} className="portfolio-card">
+
+                <Link href={card.link} target="_blank">
+                <Image src={card.image} alt={card.title} width={300} height={300} className="portfolio-image" />
+                </Link>
+
+                <div className="portfolio-content">
+                  <h3 className="portfolio-title">{card.title}</h3>
+                  <p className="portfolio-description">{card.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="contact-section">
         <div className="contact-container">
           <div className="contact-header">
             <h2 className="contact-title">Contact Me</h2>
@@ -262,3 +355,4 @@ export default function Home() {
 
   );
 }
+

@@ -29,7 +29,7 @@ export default function NavBar() {
           <Link className="nav-links" href="#skills">Skills</Link>
           <Link className="nav-links" href="#education">Education</Link>
           <Link className="nav-links" href="#experience">Experience</Link>
-          {/* <Link className="nav-links" href="#portfolio">Portfolio</Link> */}
+          <Link className="nav-links" href="#portfolio">Portfolio</Link>
           <Link className="nav-links" href="#contact">Contact</Link>
         </div>
       </nav>

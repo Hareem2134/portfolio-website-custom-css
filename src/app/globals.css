@@ -349,14 +349,16 @@ body, html {
   margin-bottom: 1.5rem;
 }
 .about-title {
-  font-size: 27px;
+  font-size: 1.75rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .about-underline {
-  width: 8rem;
+  width: 9rem;
   height: 0.25rem;
   background-color: #2563eb;
-  margin-top: 0.5rem;
+  margin: 0.5rem auto 0;
 }
 .about-container, .about-content {
   margin: 0 auto;
@@ -398,54 +400,65 @@ body, html {
 
 
 
+
 .skills-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  background-color: #f9fafb;
+  padding: 4rem 2rem;
+  background: #f9fafb;
+  color: #1e293b;
+  font-family: 'Poppins', sans-serif;
 }
+
 .skills-container {
-  max-width: 96rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
+
 .skills-header {
   text-align: center;
   margin-bottom: 3rem;
 }
+
 .skills-title {
-  font-size: 27px;
+  font-size: 1.75rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
+
 .skills-underline {
-  width: 5rem;
+  width: 6rem;
   height: 0.25rem;
   background-color: #2563eb;
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
 }
+
 .skill-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
+
 .skill-card {
-  min-width: 65vw;
-  background-color: #ffffff;
-  padding: 1.5rem;
-  box-sizing:border-box;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
+  background: white;
+  border-radius: 15px;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .skill-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
+
 .skill-title {
-  font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2563eb;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
+
 .skill-item {
   padding: 0.25rem 0.75rem;
   background-color: #f3f4f6;
@@ -454,6 +467,11 @@ body, html {
   font-size: 16px;
   margin: 0.25rem;
 }
+
+.skill-card:hover .skill-title {
+  color: #1e293b;
+}
+
 
 
 
@@ -465,34 +483,38 @@ body, html {
   background-color: #ffffff;
 }
 .experience-container {
-  max-width: 96rem;
+  max-width: 90vw;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .experience-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 .experience-title {
-  font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+  font-size: 1.75rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .experience-underline {
-  width: 8rem;
+  width: 11rem;
   height: 0.25rem;
   background-color: #2563eb;
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
 }
 .experience-card {
-  min-width: 65vw;
+  min-width: 50vw;
   background-color: #f9fafb;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 0.5rem;
   border-left: 0.25rem solid #2563eb;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .experience-card:hover {
+  transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .experience-company {
@@ -513,6 +535,7 @@ body, html {
 
 
 
+
 .contact-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -529,18 +552,21 @@ body, html {
   margin-bottom: 3rem;
 }
 .contact-title {
-  font-size: 27px;
+  font-size: 1.75rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .contact-underline {
-  width: 9rem;
+  width: 11rem;
   height: 0.25rem;
   background-color: #2563eb;
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
 }
 .contact-grid {
   display: grid;
   gap: 3rem;
+  padding-bottom: 30px;
 }
 .contact-info {
   display: flex;
@@ -635,16 +661,126 @@ body, html {
 
 
 
+
+
+
+.portfolio-section {
+  padding: 4rem 2rem;
+  background: #f9fafbf3;
+  width: 100%;
+}
+.portfolio-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+}
+.portfolio-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.portfolio-underline {
+  width: 10rem;
+  height: 0.25rem;
+  background-color: #2563eb;
+  margin: 0.5rem auto 0;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+.portfolio-card {
+  background: linear-gradient(to top right, #1e293b, #7c3aed); 
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: grayscale(80%);
+}
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+.portfolio-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+.portfolio-content .portfolio-title {
+  font-size: 1.1rem;
+  color: #14b8a6;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.portfolio-content .portfolio-description {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.portfolio-card:hover .portfolio-title {
+  color: #e2e8f0;
+}
+.portfolio-card:hover .portfolio-description {
+  color: #ffffff;
+}
+.portfolio-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.portfolio-button:hover {
+  background: #1e40af;
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
 .contact-form {
   background-color: white;
-  padding: 2rem;
+  padding: 2.75rem;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin: 25px;
 }
 .form-label {
   color: #4b5563;
@@ -680,9 +816,12 @@ body, html {
 
 
 
+
+
+
 .skills-section {
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   background-color: #f9fafb;
 }
 .skills-container {
@@ -691,26 +830,18 @@ body, html {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
-
 .experience-container {
   max-width: 80vw;
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
-
-
-
-
 .contact-container {
   width: 80vw;
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 .contact-info, .contact-form {
   padding: 1rem;
   box-sizing: border-box;
@@ -722,9 +853,8 @@ body, html {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
-  margin-top: 250px;
-  background-color: #f0f0f0;
+  padding-top: 120px;
+  background-color: #f7f5f5fa;
   color: #353535;
   font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
   font-weight: bold;
@@ -776,3 +906,77 @@ body, html {
   transform: scale(0.5);
   transition: opacity 0.3s, transform 0.3s;
 }
+
+
+
+.tracking-in-expand-fwd-bottom {
+	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+            transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+            transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
