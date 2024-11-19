@@ -34,6 +34,48 @@ const skills = [
   }
 ];
 
+const education = [
+  {
+    degree: "Bachelor's in Computer Science",
+    institution: "UBIT KARACHI UNIVERSITY",
+    year: "2014 - 2017"
+  },
+  {
+    degree: "Web Development",
+    institution: "MEMON FOUNDATION",
+    year: "2014"
+  },
+  {
+    degree: "Graphic Designing",
+    institution: "MEMON FOUNDATION",
+    year: "2014"
+  },
+  {
+    degree: "Video Editing",
+    institution: "MEMON FOUNDATION",
+    year: "2014"
+  },
+  {
+    degree: "Android App Development",
+    institution: "SIR SYED UNIVERSITY",
+    year: "2016"
+  },
+  {
+    degree: "Game Development",
+    institution: "Software House",
+    year: "2016"
+  },
+  {
+    degree: "Linux Fundamentals",
+    institution: "NED UNIVERSITY",
+    year: "2016"
+  },
+  {
+    degree: "Generative AI & Cloud Computing",
+    institution: "Governor House",
+    year: "Currently - 2026 In Shaa Allah"
+  }
+];
 
 const experiences = [
   {
@@ -57,7 +99,6 @@ const experiences = [
     description: "Developed and maintained web applications"
   }
 ];
-
 
 const PortfolioCard = [
   {
@@ -103,15 +144,15 @@ const PortfolioCard = [
     link: "https://github.com/Hareem2134/Student-Management-System"
   },
   {
-    image: "/8.png",
+    image: "/9.png",
     title: "Currency Converter",
     description: "Currency Converter in Typescript",
     link: "https://github.com/Hareem2134/Currency-Converter"
   },
   {
-    image: "/9.png",
+    image: "/8.png",
     title: "ATM App",
-    description: "ATM in Typescript",
+    description: "ATM Application in Typescript",
     link: "https://github.com/Hareem2134/ATM"
   }
 ];
@@ -230,8 +271,25 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="experience" className="experience-section">
+      <section id="education" className="education-section">
+        <div className="education-container">
+          <div className="education-header">
+            <h2 className="education-title">Education</h2>
+            <div className="education-underline"></div>
+          </div>
+          <div className="education-list">
+            {education.map((edu, index) => (
+              <div key={index} className="education-card">
+                <h3 className="education-degree">{edu.degree}</h3>
+                <p className="education-institution">{edu.institution}</p>
+                <p className="education-year">{edu.year}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <section id="experience" className="experience-section">
         <div className="experience-container">
           <div className="experience-header">
             <h2 className="experience-title">Experience</h2>
@@ -306,8 +364,6 @@ export default function Home() {
               </div>
 
 
-
-
               <div className="social-links">
                 <Link href="https://github.com" className="social-icon github">
                   <FontAwesomeIcon icon={faGithub} />
@@ -319,7 +375,6 @@ export default function Home() {
                   <FontAwesomeIcon icon={faInstagram} />
                 </Link>
               </div>
-
 
 
             </div>
